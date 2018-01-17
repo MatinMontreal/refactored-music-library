@@ -29,26 +29,49 @@ var library = {
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
 
+// var printPlaylists = function () {
 
 
-    for (var p in library.playlists) {
-
-      console.log(p + ": " + library.playlists[p].name + " - " + library.playlists[p].tracks.length + " tracks");
-      //var playlistName = p.name;
-    // var trackCount = p.tracks.length;
-    // console.log(p + ": " + playlistName + trackCount + "tracks")
-    }
-
-
-// for (var planet in planetMoons) {
-//   var numberOfMoons = planetMoons[planet];
-//   console.log("Planet: " + planet + ", # of Moons: "+ numberOfMoons);
+//     for (var p in library.playlists) {
+//       console.log(p + ": " + library.playlists[p].name + " - " + library.playlists[p].tracks.length + " tracks");
+//     }
 // }
 
-// for (var planet in planetMoons) {
-//   var numberOfMoons = planetMoons[planet];
-//   console.log("Planet: " + planet + ", # of Moons: "+ numberOfMoons);
-//}
+
+
+// var library = {
+//   tracks: { t01: { id: "t01",
+//                    name: "Code Monkey",
+//                    artist: "Jonathan Coulton",
+//                    album: "Thing a Week Three" },
+//             t02: { id: "t02",
+//                    name: "Model View Controller",
+//                    artist: "James Dempsey",
+//                    album: "WWDC 2003"},
+//             t03: { id: "t03",
+//                    name: "Four Thirty-Three",
+//                    artist: "John Cage",
+//                    album: "Woodstock 1952"}
+//           },
+//   playlists: { p01: { id: "p01",
+//                       name: "Coding Music",
+//                       tracks: ["t01", "t02"]
+//                     },
+//                p02: { id: "p02",
+//                       name: "Other Playlist",
+//                       tracks: ["t03"]
+//                     }
+//              }
+// }
+
+var printTracks = function () {
+    for (var t in library.tracks) {
+      console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+}
+}
+
+printTracks()
+        //+ ": " + library.playlists[p].tracks + " - " " tracks");
 
 
 // prints a list of all tracks, in the form:
@@ -62,7 +85,6 @@ var library = {
 
 
 // prints a list of tracks for a given playlist, in the form:
-// p01: Coding Music - 2 tracks
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 
