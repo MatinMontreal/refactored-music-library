@@ -85,12 +85,18 @@ var library = {
 //}
 
 
+// adds an existing track to an existing playlist. add track 2 to playlist2
 
+// var addTrackToPlaylist = function (trackId, playlistId) {
+//     var playlist = library.playlists[playlistId];
+//     //console.log(playlist.tracks);
+//         //playlistId.tracks. add trackId
+//     playlist.tracks.push(trackId)
+//     //`this is the same - library["playlists"][playlistId]["tracks"]
+//     console.log(playlist.tracks);
+// }
 
-
-
-
-
+// addTrackToPlaylist("t03", "p01");
 
 
 
@@ -122,81 +128,33 @@ var library = {
 //}
 
 
-
-
-
-// adds an existing track to an existing playlist. add track 2 to playlist2
-
-var addTrackToPlaylist = function (trackId, playlistId) {
-    var playlist = library.playlists[playlistId];
-    //console.log(playlist.tracks);
-        //playlistId.tracks. add trackId
-    playlist.tracks.push(trackId)
-    //`this is the same - library["playlists"][playlistId]["tracks"]
-    console.log(playlist.tracks);
+var uid = function() {
+    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
 }
-
-addTrackToPlaylist("t03", "p01");
-
-
-// var obj = {
-//     key1: value1,
-//     key2: value2
-// };
-// Using dot notation:
-// obj.key3 = "value3";
-
-
-// var obj = {key1: value1, key2: value2};
-// How can I add {key3: value3} to object obj ?
-
-// Answer
-// There are two ways to add a new property to an object:
-
-// Use dot notation
-// If you know the key name of the property, the key3 in this example
-
-// obj.key3 = "value3";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// generates a unique id
-// (use this for addTrack and addPlaylist)
-
-//var uid = function() {
-//  return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-//}
 
 
 // adds a track to the library
 
-//var addTrack = function (name, artist, album) {
+var addTrack = function (name, artist, album) {
+    var generatedID = uid();
+    library.tracks[generatedID] ={};
+    library.tracks[generatedID].id = generatedID;
+    library.tracks[generatedID].name = name;
+    library.tracks[generatedID].artist = artist;
+    library.tracks[generatedID].album = album;
+  }
 
-//}
+  addTrack("Get in the Groove", "Madonna", "Borderline");
+
+  console.log (library);
 
 
 // adds a playlist to the library
 
-//var addPlaylist = function (name) {
-
-//}
+// var addPlaylist = function (name) {
+//   var genID = uid();
+//   library.playlists[genID] = {};
+// }
 
 
 // STRETCH:
