@@ -135,27 +135,33 @@ var uid = function() {
 
 // adds a track to the library
 
-var addTrack = function (name, artist, album) {
-    var generatedID = uid();
-    library.tracks[generatedID] ={};
-    library.tracks[generatedID].id = generatedID;
-    library.tracks[generatedID].name = name;
-    library.tracks[generatedID].artist = artist;
-    library.tracks[generatedID].album = album;
-  }
+// var addTrack = function (name, artist, album) {
+//     var generatedID = uid();
+//     library.tracks[generatedID] ={};
+//     library.tracks[generatedID].id = generatedID;
+//     library.tracks[generatedID].name = name;
+//     library.tracks[generatedID].artist = artist;
+//     library.tracks[generatedID].album = album;
+//   }
 
-  addTrack("Get in the Groove", "Madonna", "Borderline");
+//   addTrack("Get in the Groove", "Madonna", "Borderline");
 
-  console.log (library);
+//   console.log (library);
 
 
 // adds a playlist to the library
 
-// var addPlaylist = function (name) {
-//   var genID = uid();
-//   library.playlists[genID] = {};
-// }
+var addPlaylist = function (name) {
+   var genID = uid();
+   library.playlists[genID] = {};
+   library.playlists[genID].id = genID;
+   library.playlists[genID].name = name;
+   library.playlists[genID].track = [];
+ }
 
+addPlaylist("Playlist for Coding")
+
+console.log(library.playlists);
 
 // STRETCH:
 // given a query string string, prints a list of tracks
