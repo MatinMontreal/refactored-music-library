@@ -53,6 +53,46 @@ var library = {
 // printTracks()
 
 
+// prints a list of tracks for a given playlist, in the form:
+// p01: Coding Music - 2 tracks
+// t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
+// t02: Model View Controller by James Dempsey (WWDC 2003)
+
+// var printTrack = function(trackId) {
+
+// }
+
+
+// var printPlaylist = function (playlistId) {
+//        console.log(playlistId + ": " + library.playlists[playlistId].name + " - " + library.playlists[playlistId].tracks.length + " tracks");
+
+//       //for (var t in library.tracks) {
+// //        console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+// //       }
+// //      }
+
+//       for (var t of library.playlists[playlistId].tracks) {
+//         console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+
+//       }
+
+//  //      console.log(library.playlists[playlistId].tracks
+
+// //  var playlist = library.playlists[playlistId];
+// //  console.log(playlist.id);
+// }
+//   printPlaylist("p01");
+//}
+
+
+
+
+
+
+
+
+
+
 
 
 // var library = {
@@ -81,36 +121,42 @@ var library = {
 // }
 //}
 
-// prints a list of tracks for a given playlist, in the form:
-// p01: Coding Music - 2 tracks
-// t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
-// t02: Model View Controller by James Dempsey (WWDC 2003)
-
-// var printTrack = function(trackId) {
-
-// }
 
 
-var printPlaylist = function (playlistId) {
-       console.log(playlistId + ": " + library.playlists[playlistId].name + " - " + library.playlists[playlistId].tracks.length + " tracks");
 
-      //for (var t in library.tracks) {
-//        console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
-//       }
-//      }
 
-      for (var t of library.playlists[playlistId].tracks) {
-        console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+// adds an existing track to an existing playlist. add track 2 to playlist2
 
-      }
-
- //      console.log(library.playlists[playlistId].tracks
-
-//  var playlist = library.playlists[playlistId];
-//  console.log(playlist.id);
+var addTrackToPlaylist = function (trackId, playlistId) {
+    var playlist = library.playlists[playlistId];
+    //console.log(playlist.tracks);
+        //playlistId.tracks. add trackId
+    playlist.tracks.push(trackId)
+    //`this is the same - library["playlists"][playlistId]["tracks"]
+    console.log(playlist.tracks);
 }
-  printPlaylist("p01");
-//}
+
+addTrackToPlaylist("t03", "p01");
+
+
+// var obj = {
+//     key1: value1,
+//     key2: value2
+// };
+// Using dot notation:
+// obj.key3 = "value3";
+
+
+// var obj = {key1: value1, key2: value2};
+// How can I add {key3: value3} to object obj ?
+
+// Answer
+// There are two ways to add a new property to an object:
+
+// Use dot notation
+// If you know the key name of the property, the key3 in this example
+
+// obj.key3 = "value3";
 
 
 
@@ -129,16 +175,6 @@ var printPlaylist = function (playlistId) {
 
 
 
-
-
-
-
-
-// adds an existing track to an existing playlist
-
-//var addTrackToPlaylist = function (trackId, playlistId) {
-
-//}
 
 
 // generates a unique id
