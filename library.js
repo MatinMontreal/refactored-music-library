@@ -30,12 +30,28 @@ var library = {
 // p02: Other Playlist - 1 tracks
 
 // var printPlaylists = function () {
+// for (var p in library.playlists) {
+//        console.log(p + ": " + library.playlists[p].name + " - " + library.playlists[p].tracks.length + " tracks");
+//      }
+//  }
+
+// printPlaylists();
 
 
-//     for (var p in library.playlists) {
-//       console.log(p + ": " + library.playlists[p].name + " - " + library.playlists[p].tracks.length + " tracks");
-//     }
-// }
+
+// prints a list of all tracks, in the form:
+// t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
+// t02: Model View Controller by James Dempsey (WWDC 2003)
+// t03: Four Thirty-Three by John Cage (Woodstock 1952)
+
+// var printTracks = function () {
+//      for (var t in library.tracks) {
+//        console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+//       }
+//      }
+
+// printTracks()
+
 
 
 
@@ -63,34 +79,59 @@ var library = {
 //                     }
 //              }
 // }
-
-var printTracks = function () {
-    for (var t in library.tracks) {
-      console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
-}
-}
-
-printTracks()
-        //+ ": " + library.playlists[p].tracks + " - " " tracks");
-
-
-// prints a list of all tracks, in the form:
-// t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
-// t02: Model View Controller by James Dempsey (WWDC 2003)
-// t03: Four Thirty-Three by John Cage (Woodstock 1952)
-
-//var printTracks = function () {
-
 //}
-
 
 // prints a list of tracks for a given playlist, in the form:
+// p01: Coding Music - 2 tracks
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 
-//var printPlaylist = function (playlistId) {
+// var printTrack = function(trackId) {
 
+// }
+
+
+var printPlaylist = function (playlistId) {
+       console.log(playlistId + ": " + library.playlists[playlistId].name + " - " + library.playlists[playlistId].tracks.length + " tracks");
+
+      //for (var t in library.tracks) {
+//        console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+//       }
+//      }
+
+      for (var t of library.playlists[playlistId].tracks) {
+        console.log(t + ": " + library.tracks[t].name + " by " + library.tracks[t].artist + " (" + library.tracks[t].album + ")" );
+
+      }
+
+ //      console.log(library.playlists[playlistId].tracks
+
+//  var playlist = library.playlists[playlistId];
+//  console.log(playlist.id);
+}
+  printPlaylist("p01");
 //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // adds an existing track to an existing playlist
